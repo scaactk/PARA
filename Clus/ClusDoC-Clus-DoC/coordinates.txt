@@ -1,0 +1,3 @@
+# Export ROI coordinates 21-Nov-2022
+# ROI Multiplier 0.11
+roi1	1	2823	8874	3256	8874	3256	8441	2823	8441

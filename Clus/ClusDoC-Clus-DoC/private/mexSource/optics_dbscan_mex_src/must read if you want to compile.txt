@@ -1,0 +1,18 @@
+I was advised by my HPC team to use 2017a Matlab in command line mode (that may be crucial)
+The commands to compile these 2 mexa64 files then pass normally (run this when cd to corresponding directories):
+
+mex -v -largeArrayDims CXXFLAGS="$CXXFLAGS -fPIC -fopenmp" -I/usr/include -cxx -c kdtree2.cpp utils.cpp kdtree2rnearest.cpp
+
+mex -v -largeArrayDims CXXFLAGS="$CXXFLAGS -fPIC -fopenmp" CXXLIBS="$CXXLIBS -fopenmp" -cxx kdtree2.o utils.o kdtree2rnearest.o -output kdtree2rnearest
+
+and
+
+mex -v -largeArrayDims CXXFLAGS="$CXXFLAGS -fPIC -fopenmp" -I/usr/include -cxx -c kdtree2.cpp dbscan.cpp utils.cpp clusters.cpp omp_dbscan.cpp pdsdbscan.cpp
+
+mex -v -largeArrayDims CXXFLAGS="$CXXFLAGS -fPIC -fopenmp" CXXLIBS="$CXXLIBS -fopenmp" -cxx kdtree2.o dbscan.o utils.o clusters.o omp_dbscan.o pdsdbscan.o -output pdsdbscan
+
+don't forger to rename "pdsdbscan.mexa64 to "t_dbscan.mexa64", the latter name is used by ClusDoC.
+
+
+
+https://github.com/PRNicovich/ClusDoC/issues/1
