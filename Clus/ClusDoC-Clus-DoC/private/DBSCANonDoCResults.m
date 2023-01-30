@@ -40,7 +40,7 @@ clusterTable = [];
                 if ~isempty(Data)
                     
                     thisROIandThisChannel = CellData{cellIter}(whichPointsInROI, 12) == Ch;
-
+                    % Data_DoC1为当前channel下的全ROI数据，包含DOC值，
                     Data_DoC1 = Data(thisROIandThisChannel, :);
 
 
@@ -72,6 +72,8 @@ clusterTable = [];
                     % [datathr, ClusterSmooth, SumofContour, classOut, varargout] = DBSCANHandler(Data, ...
                     % DBSCANParams, cellNum, ROINum, display1, display2, clusterColor, InOutMaskVector, Density, DoCScore)
                     
+                    %classOut是clusterID的标签
+
                     [~, ClusterCh, ~, classOut, ~, ~, ~, ResultCell{roiIter, cellIter}] = DBSCANHandler(Data_DoC1(:,5:6), ...
                         dbscanParams, cellIter, roiIter, true, false, clusterColor, Data_DoC1(:, NDatacolumns + 2), Data_DoC1(:, NDatacolumns + 6), ...
                         Data_DoC1(:, NDatacolumns + 4));
@@ -85,6 +87,18 @@ clusterTable = [];
                     % Doing this here to send to AppendToClusterTable, when
                     % also done (permanently) in ClusDoC 
                     CellData{cellIter}(whichPointsInROI & (CellData{cellIter}(:,12) == Ch), NDatacolumns + 3) = classOut;
+
+                    % 给ROI内的数据继续细分
+                    Data_DoC1(:, 22) = classOut;
+                    % Points in ROI but not in cluster
+                    ROI_non_cluster = Data_DoC1(classOut==0,:);
+                    xlswrite(fullfile(Path_name, strcat('ROI_', sprintf('%d_', roiIter), 'non_cluster_', sprintf('Ch%d', Ch))), ROI_non_cluster);
+                    % Points in ROI and in cluster
+                    ROI_in_cluster = Data_DoC1(classOut~=0,:);
+                    xlswrite(fullfile(Path_name, strcat('ROI_', sprintf('%d_', roiIter), 'in_cluster_', sprintf('Ch%d', Ch))), ROI_in_cluster);
+                    
+                    
+                    
                                        
 %                     InClusters = whichPointsInROI;
 %                     InClusters(thisROIandThisChannel) = classOut > 0;

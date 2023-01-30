@@ -24,23 +24,24 @@ function [CellData, DensityROI] = DoCHandler(ROICoordinates, CellData, Lr_rad, R
             whichPointsInROI = whichPointsInROI(:, roiIter) == '1';
             whichPointsNotInROI = ~whichPointsInROI;
                
-            % dataCropped only include points in ROI, all columin
+            % dataCropped only include points in ROI, all column
             dataCropped = CellData{cellIter}(whichPointsInROI, :);
             NotROIdataCropped = CellData{cellIter}(whichPointsNotInROI, :);
 
             if ~isempty(dataCropped)
                 
                 dataCropped(isnan(dataCropped(:,12)),:)=[];
-                NotROIdataCropped(isnan(dataCropped(:,12)),:)=[];
+                % NotROIdataCropped(isnan(dataCropped(:,12)),:)=[];
 
                 % Send single ROI of data to DoC calculation function
                 [ Data_DegColoc1, SizeROI1 ] = DoCCalc( dataCropped, Lr_rad, Rmax, Step, roiHere );
-                writetable(Data_DegColoc1, "Data_DegColoc1.csv")
-                [ Data_DegColoc1NOT, SizeROI1NOT ] = DoCCalc( NotROIdataCropped, Lr_rad, Rmax, Step, roiHere );
+                % writetable(Data_DegColoc1, "Data_DegColoc1.csv")
+                % [ Data_DegColoc1NOT, SizeROI1NOT ] = DoCCalc( NotROIdataCropped, Lr_rad, Rmax, Step, roiHere );
                 % csvwrite("Data_DegColoc1NOT.csv", Data_DegColoc1NOT)
                 
                 
-                % select and remove DoC==0
+                % select and remove Lr_rAboveThresh==0， 
+                % but this do not means doc =0
                 CA1 = Data_DegColoc1.DoC((Data_DegColoc1.Ch == 1) & (Data_DegColoc1.Lr_rAboveThresh == 1)); % Ch1 -> Ch2
                 CA2 = Data_DegColoc1.DoC((Data_DegColoc1.Ch == 2) & (Data_DegColoc1.Lr_rAboveThresh == 1)); % Ch2 -> Ch1
 
@@ -108,9 +109,22 @@ function [CellData, DensityROI] = DoCHandler(ROICoordinates, CellData, Lr_rad, R
     assignin('base', 'CellData', CellData);
     
     for k = 1:numel(CellData)
-        DoC1CumHist = DoC1CumHist + histc(CellData{k}((CellData{k}(:,NDatacolumns + 1) > 0) & (CellData{k}(:,12) == 1) & (CellData{k}(:, NDatacolumns + 7) == 1), NDatacolumns + 4), ...
+        DoC1CumHist = DoC1CumHist + histc( ...
+            CellData{k}( ...
+                (CellData{k}(:,NDatacolumns + 1) > 0) ...
+                & (CellData{k}(:,12) == 1) ...
+                & (CellData{k}(:, NDatacolumns + 7) == 1), ...
+                NDatacolumns + 4 ...
+                ), ...
             linspace(-1, 1, 100));
-        DoC2CumHist = DoC2CumHist + histc(CellData{k}((CellData{k}(:,NDatacolumns + 1) > 0) & (CellData{k}(:,12) == 2) & (CellData{k}(:, NDatacolumns + 7) == 1), NDatacolumns + 4), ...
+        
+        DoC2CumHist = DoC2CumHist + histc( ...
+            CellData{k}( ...
+                (CellData{k}(:,NDatacolumns + 1) > 0) ...
+                & (CellData{k}(:,12) == 2) ...
+                & (CellData{k}(:, NDatacolumns + 7) == 1), ...
+                NDatacolumns + 4 ...
+                ), ...
             linspace(-1, 1, 100));
     end
     
