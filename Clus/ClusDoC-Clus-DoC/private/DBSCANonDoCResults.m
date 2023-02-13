@@ -30,6 +30,7 @@ clusterTable = [];
         for cellIter = 1:length(CellData) % index for the cell
             for roiIter = 1:length(ROICoordinates{cellIter}) % index for the region
 
+
                 % Since which ROI a point falls in is encoded in binary, decode here
                 whichPointsInROI = fliplr(dec2bin(CellData{cellIter}(:,NDatacolumns + 1)));
                 whichPointsInROI = whichPointsInROI(:, roiIter) == '1';
@@ -92,6 +93,13 @@ clusterTable = [];
                     Data_DoC1(:, 22) = classOut;
                     % Points in ROI but not in cluster
                     ROI_non_cluster = Data_DoC1(classOut==0,:);
+                    % calculate background density: non cluster molecules / ROI^2
+                    % 先算面积
+                    roiHere = ROICoordinates{cellIter}{roiIter};
+                    SizeROI = polyarea(roiHere(:,1), roiHere(:,2));
+                    background_density = length(ROI_non_cluster) / SizeROI
+
+
                     xlswrite(fullfile(Path_name, strcat('ROI_', sprintf('%d_', roiIter), 'non_cluster_', sprintf('Ch%d', Ch))), ROI_non_cluster);
                     % Points in ROI and in cluster
                     ROI_in_cluster = Data_DoC1(classOut~=0,:);
@@ -116,7 +124,7 @@ clusterTable = [];
                     % function.
 
                     
-                    clusterTable = AppendToClusterTableInternal(clusterTable, Ch, cellIter, roiIter, ClusterCh, classOut);
+                    [clusterTable, ClusterCh] = AppendToClusterTableInternal(clusterTable, Ch, cellIter, roiIter, ClusterCh, classOut, background_density);
                     
                     % Save the plot and data
                     switch Ch
@@ -158,7 +166,7 @@ clusterTable = [];
 save(fullfile(Path_name, 'DBSCAN Clus-DoC Results.mat'),'ClusterSmoothTableCh1','ClusterSmoothTableCh2');
 end
 
-function clusterTableOut = AppendToClusterTableInternal(clusterTable, Ch, cellIter, roiIter, ClusterCh, classOut)
+function [clusterTableOut, ClusterCh] = AppendToClusterTableInternal(clusterTable, Ch, cellIter, roiIter, ClusterCh, classOut, background_density);
 
     try 
         if isempty(clusterTable)
@@ -197,6 +205,16 @@ function clusterTableOut = AppendToClusterTableInternal(clusterTable, Ch, cellIt
         appendTable(:, 13) = cellfun(@(x) x.Nb_In, ClusterCh); % Nb_In
         appendTable(:, 14) = cellfun(@(x) x.NInsideMask, ClusterCh); % NPointsInsideMask
         appendTable(:, 15) = cellfun(@(x) x.NOutsideMask, ClusterCh); % NPointsInsideMask
+
+        appendTable(:, 16) = appendTable(:, 5) ./ appendTable(:, 8);  % absolute density
+        appendTable(:, 17) = appendTable(:, 16) / background_density; % relative density 2
+        
+        [r, c] = size(ClusterCh);
+        for i = 1:r
+            ClusterCh{i, 1}.absolute_density = appendTable(i, 16);
+            ClusterCh{i, 1}.relative_density2 = appendTable(i, 17);
+        end
+        
 
         clusterTableOut = [clusterTable; appendTable];
     
