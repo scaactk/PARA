@@ -21,6 +21,8 @@ ResultCell = cell(max(cellfun(@length, ROICoordinates)), length(CellData)); % it
 
 clusterIDOut = cell(max(cellfun(@length, ROICoordinates)), length(CellData), 2);
 
+AvReDen2Cell = cell(max(cellfun(@length, ROICoordinates)), 2); % roi row, chan col...不行,
+
 clusterTable = [];
 
     for Ch = 1:2
@@ -97,7 +99,7 @@ clusterTable = [];
                     % 先算面积
                     roiHere = ROICoordinates{cellIter}{roiIter};
                     SizeROI = polyarea(roiHere(:,1), roiHere(:,2));
-                    background_density = length(ROI_non_cluster) / SizeROI
+                    background_density = length(ROI_non_cluster) / SizeROI;
 
 
                     xlswrite(fullfile(Path_name, strcat('ROI_', sprintf('%d_', roiIter), 'non_cluster_', sprintf('Ch%d', Ch))), ROI_non_cluster);
@@ -124,14 +126,15 @@ clusterTable = [];
                     % function.
 
                     
-                    [clusterTable, ClusterCh] = AppendToClusterTableInternal(clusterTable, Ch, cellIter, roiIter, ClusterCh, classOut, background_density);
+                    [clusterTable, ClusterCh, AvReDen2] = AppendToClusterTableInternal(clusterTable, Ch, cellIter, roiIter, ClusterCh, classOut, background_density);
                     
+                    AvReDen2Cell{roiIter,cellIter} = AvReDen2;
+
                     % Save the plot and data
                     switch Ch
                         case 1
 
                             ClusterSmoothTableCh1{roiIter,cellIter} = ClusterCh;
-
                         case 2
 
                             ClusterSmoothTableCh2{roiIter,cellIter} = ClusterCh;
@@ -166,7 +169,7 @@ clusterTable = [];
 save(fullfile(Path_name, 'DBSCAN Clus-DoC Results.mat'),'ClusterSmoothTableCh1','ClusterSmoothTableCh2');
 end
 
-function [clusterTableOut, ClusterCh] = AppendToClusterTableInternal(clusterTable, Ch, cellIter, roiIter, ClusterCh, classOut, background_density);
+function [clusterTableOut, ClusterCh, average_relative_density2] = AppendToClusterTableInternal(clusterTable, Ch, cellIter, roiIter, ClusterCh, classOut, background_density);
 
     try 
         if isempty(clusterTable)
@@ -210,10 +213,24 @@ function [clusterTableOut, ClusterCh] = AppendToClusterTableInternal(clusterTabl
         appendTable(:, 17) = appendTable(:, 16) / background_density; % relative density 2
         
         [r, c] = size(ClusterCh);
+        sum_ab = 0;
+        sum_re2 = 0;
         for i = 1:r
             ClusterCh{i, 1}.absolute_density = appendTable(i, 16);
             ClusterCh{i, 1}.relative_density2 = appendTable(i, 17);
+            sum_ab = sum_ab + ClusterCh{i, 1}.absolute_density;
+            sum_re2 = sum_re2 + ClusterCh{i, 1}.relative_density2;
         end
+        average_absolute_density = sum_ab / r;
+        average_relative_density2 = sum_re2 / r;
+
+        disp("******************** average_absolute_desntiy");
+        disp(average_absolute_density);
+        disp("******************** average_relative_desntiy2");
+        disp(average_relative_density2);
+        
+
+        % save(fullfile(Path_name, sprintf('Ch%d.txt', Ch)), [average_absolute_densit, average_relative_density2], '-ascii');
         
 
         clusterTableOut = [clusterTable; appendTable];
