@@ -22,7 +22,7 @@ def mark_data(file_path):
     grouped = df.groupby(["ClusterID"])
     select1 = grouped.agg(Col1=("DOC", lambda x: len(x) >= 10))
     # Col2 is a new column name
-    select2 = grouped.agg(Col2=("DOC", lambda x: sum(x >= 0.4) > 4))
+    select2 = grouped.agg(Col2=("DOC", lambda x: sum(x >= 0.4) > 10))
     select = select1['Col1'] & select2['Col2']
     # print(select)
 
@@ -63,7 +63,7 @@ file_list = [
     "ROI_1_in_cluster_Ch1.xls",
     "ROI_1_in_cluster_Ch2.xls",
     "ROI_2_in_cluster_Ch1.xls",
-    "ROI_2_in_cluster_Ch2.xls",
+    "ROI_2_in_cluster_Ch2.xls"
 ]
 
 for item in file_list:

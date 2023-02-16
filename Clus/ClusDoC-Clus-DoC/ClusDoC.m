@@ -12,7 +12,7 @@ end
 function DoCGUIInitialize(varargin)
 
     figObj = findobj('Tag', 'PALM GUI');
-    if ~isempty(figObj); % If figure already exists, clear it out and reset it.
+    if ~isempty(figObj) % If figure already exists, clear it out and reset it.
         clf(figObj);
         handles = guidata(figObj);
         fig1 = figObj;

@@ -1,4 +1,4 @@
-function ExportDBSCANDataToExcelFiles(cellROIPair, Result, outputFolder, chan)
+function ExportDBSCANDataToExcelFiles(cellROIPair, Result, outputFolder, chan, AvReDen2Cell)
 
     function y = isstructmissing(x)
         if isstruct(x) || isempty(x)
@@ -35,11 +35,12 @@ function ExportDBSCANDataToExcelFiles(cellROIPair, Result, outputFolder, chan)
     HeaderArray=[{'Cell'},{'ROI'},{'x bottom corner'},{'y bottom corner'},{'Size of ROI (nm)'},{'Comments'},{'Percentage of molecules in clusters'},...
         {'Average number of molecules per cluster'}, {'Average cluster area (nm^2)'}, {'Abslute density in clusters (molecules / um^2)'}, ...
         {'Relative density in clusters'}, {'Total number of molecules in ROI'}, ...
-        {'Circularity'}, {'Number of clusters in ROI'}, {'Density of clusters (clusters / um^2)'}, {'absolute_density'}, {'relative_density2'}];
+        {'Circularity'}, {'Number of clusters in ROI'}, {'Density of clusters (clusters / um^2)'}, {'Average_relative_density2'}];
 
     Matrix_Result = [Percent_in_Cluster_column(notemptyA)'*100 , Number_column(notemptyA)' , Area_column(notemptyA)' , Density_column(notemptyA)'*1e6 ,...
         RelativeDensity_column(notemptyA)', TotalNumber(notemptyA)', Circularity_column(notemptyA)', Number_Cluster_column(notemptyA)', Number_Cluster_column(notemptyA)'./(1e-6*cellROIPair(:,5))];
-    
+    Avg = [AvReDen2Cell{:,chan}].';
+
     try 
         
         disp('Export')
@@ -48,6 +49,7 @@ function ExportDBSCANDataToExcelFiles(cellROIPair, Result, outputFolder, chan)
         xlswrite(fullfile(outputFolder, 'DBSCAN Results.xls'), cellROIPair, sprintf('Chan%d', chan), 'A2');
         xlswrite(fullfile(outputFolder, 'DBSCAN Results.xls'), HeaderArray, sprintf('Chan%d', chan), 'A1');
         xlswrite(fullfile(outputFolder, 'DBSCAN Results.xls'), Matrix_Result, sprintf('Chan%d', chan), 'G2');
+        xlswrite(fullfile(outputFolder, 'DBSCAN Results.xls'), Avg, sprintf('Chan%d', chan), 'P2');
         
     catch 
         % Catch error for xlswrite that exists on some machines
@@ -58,6 +60,7 @@ function ExportDBSCANDataToExcelFiles(cellROIPair, Result, outputFolder, chan)
         assignin('base', 'cellROIPair', cellROIPair);
         assignin('base', 'HeaderArray', HeaderArray);
         assignin('base', 'Matrix_Result', Matrix_Result);
+        assignin('base', 'AvReDen2', Avg);
         
         matOut = [cellROIPair, nan(size(cellROIPair, 1), 1), Matrix_Result];
         fID = fopen(fullfile(outputFolder, sprintf('DBSCAN Results Chan%d.txt', chan)), 'w+');

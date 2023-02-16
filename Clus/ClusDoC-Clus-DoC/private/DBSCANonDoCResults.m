@@ -21,7 +21,7 @@ ResultCell = cell(max(cellfun(@length, ROICoordinates)), length(CellData)); % it
 
 clusterIDOut = cell(max(cellfun(@length, ROICoordinates)), length(CellData), 2);
 
-AvReDen2Cell = cell(max(cellfun(@length, ROICoordinates)), 2); % roi row, chan col...不行,
+AvReDen2Cell = cell(max(cellfun(@length, ROICoordinates)), 2); % roi as row, chan as col...
 
 clusterTable = [];
 
@@ -95,7 +95,7 @@ clusterTable = [];
                     Data_DoC1(:, 22) = classOut;
                     % Points in ROI but not in cluster
                     ROI_non_cluster = Data_DoC1(classOut==0,:);
-                    % calculate background density: non cluster molecules / ROI^2
+                    % calculate background density: non cluster molecules / ROI
                     % 先算面积
                     roiHere = ROICoordinates{cellIter}{roiIter};
                     SizeROI = polyarea(roiHere(:,1), roiHere(:,2));
@@ -128,7 +128,7 @@ clusterTable = [];
                     
                     [clusterTable, ClusterCh, AvReDen2] = AppendToClusterTableInternal(clusterTable, Ch, cellIter, roiIter, ClusterCh, classOut, background_density);
                     
-                    AvReDen2Cell{roiIter,cellIter} = AvReDen2;
+                    AvReDen2Cell{roiIter,Ch} = AvReDen2;
 
                     % Save the plot and data
                     switch Ch
@@ -161,7 +161,7 @@ clusterTable = [];
 %         assignin('base', 'p', cellIter);
 %         assignin('base', 'q', roiIter);
         
-        ExportDBSCANDataToExcelFiles(cellROIPair, ResultCell, strcat(Path_name, '\DBSCAN Results'), Ch);
+        ExportDBSCANDataToExcelFiles(cellROIPair, ResultCell, strcat(Path_name, '\DBSCAN Results'), Ch, AvReDen2Cell);
 
     end % channel
 
