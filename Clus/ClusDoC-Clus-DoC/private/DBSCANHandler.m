@@ -161,7 +161,7 @@ try
             datathr = Data(dataThreshVector, 1:2);
         end
         
-        if nargout == 9;
+        if nargout == 9
             disp('export dataThreshVector');
             varargout{5} = dataThreshVector;
         end
