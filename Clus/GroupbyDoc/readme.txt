@@ -24,7 +24,7 @@ line 21-25:
 change the number 10 to any other filter number x for selecting a co-localized group which has x points' doc > than 0.4
 
 3. how to run this script
-conda activate xxx
-python find_ColCluster.py
+conda activate clus    # this step is to activate the environment
+python find_ColCluster.py    # this step is to run the script
 
 or run this code in an IDE pycharm
