@@ -1,3 +1,6 @@
+readme
+------------for find_ColCluster.py------------------------------------
+
 1. modify the path of input
 """
 root_path = r"D:\GithubRepository\PARA\Clus\20220911\test\Clus-DoC Results\ROI_set"
@@ -23,3 +26,13 @@ conda activate clus    # this step is to activate the environment
 python find_ColCluster.py    # this step is to run the script
 
 or run this code in an IDE pycharm
+
+------------------------for statistics.py----------------------------------
+identify the root_path in code
+root_path = r"D:\GithubRepository\PARA\Clus\20220911\test\Clus-DoC Results\ROI_set\after_col_mark"
+
+# run
+conda activate clus    # this step is to activate the environment
+python statistics.py    # this step is to run the script
+
+
