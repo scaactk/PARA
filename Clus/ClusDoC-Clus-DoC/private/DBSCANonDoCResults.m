@@ -101,11 +101,14 @@ clusterTable = [];
                     SizeROI = polyarea(roiHere(:,1), roiHere(:,2));
                     background_density = length(ROI_non_cluster) / SizeROI;
 
+                    if ~exist(fullfile(Path_name, '\ROI_set'), 'dir')
+                        mkdir(fullfile(Path_name, '\ROI_set'));
+                    end
 
-                    xlswrite(fullfile(Path_name, strcat('ROI_', sprintf('%d_', roiIter), 'non_cluster_', sprintf('Ch%d', Ch))), ROI_non_cluster);
                     % Points in ROI and in cluster
                     ROI_in_cluster = Data_DoC1(classOut~=0,:);
-                    xlswrite(fullfile(Path_name, strcat('ROI_', sprintf('%d_', roiIter), 'in_cluster_', sprintf('Ch%d', Ch))), ROI_in_cluster);
+                    combine_ROI = [ROI_non_cluster; ROI_in_cluster];
+                    xlswrite(fullfile(Path_name, '\ROI_set', strcat('ROI_', sprintf('%d_', roiIter), 'all_events_', sprintf('Ch%d', Ch))), combine_ROI);
                     
                     
                     

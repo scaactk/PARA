@@ -58,22 +58,22 @@ def mark_data(file_path):
 
 
 # modify your path for data and file here
-root_path = "D:\GithubRepository\PARA\Clus/20220911/test\Clus-DoC Results"
-file_list = [
-    "ROI_1_in_cluster_Ch1.xls",
-    "ROI_1_in_cluster_Ch2.xls",
-    "ROI_2_in_cluster_Ch1.xls",
-    "ROI_2_in_cluster_Ch2.xls"
-]
+root_path = r"D:\GithubRepository\PARA\Clus\20220911\test\Clus-DoC Results\ROI_set"
 
-for item in file_list:
-    file_path = os.path.join(root_path, item)
-    print(file_path)
-    df = mark_data(file_path)
+depth = 1
+for root, dirs, files in os.walk(root_path):
+    if depth == 2:
+        break
+    for item in files:
+        file_path = os.path.join(root_path, item)
+        print(file_path)
+        df = mark_data(file_path)
 
-    target_path = os.path.join(root_path, "after_col_mark")
-    if not os.path.exists(target_path):
-        os.makedirs(os.path.join(root_path, "after_col_mark"))
-    file_name = os.path.join(target_path, item.split('.')[0] + '.xlsx')
-    print(file_name)
-    df.to_excel(file_name, index=False)
+        target_path = os.path.join(root_path, "after_col_mark")
+        if not os.path.exists(target_path):
+            os.makedirs(os.path.join(root_path, "after_col_mark"))
+        file_name = os.path.join(target_path, item.split('.')[0] + '.xlsx')
+        print(file_name)
+        df.to_excel(file_name, index=False)
+
+    depth += 1
