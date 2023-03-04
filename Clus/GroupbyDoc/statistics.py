@@ -1,14 +1,39 @@
 import os
 
 import pandas as pd
-import numpy as np
 
 root_path = r"D:\GithubRepository\PARA\Clus\20220911\test\Clus-DoC Results\ROI_set\after_col_mark"
 for root, dir, files in os.walk(root_path):
+    statistics_channel_1 = pd.DataFrame(columns=["total_events",
+                                                 "non_clustered_events",
+                                                 "events_in_colocalized_cluster",
+                                                 "events_in_noncolocalized_cluster",
+                                                 "total_colocalized_events",
+                                                 "noncluster_colocalized_event",
+                                                 "colocalized_events_in_colocalized_clusters",
+                                                 "colocalized_events_in_noncolocalized_cluster",
+                                                 ])
+    statistics_channel_2 = pd.DataFrame(columns=["total_events",
+                                                 "non_clustered_events",
+                                                 "events_in_colocalized_cluster",
+                                                 "events_in_noncolocalized_cluster",
+                                                 "total_colocalized_events",
+                                                 "noncluster_colocalized_event",
+                                                 "colocalized_events_in_colocalized_clusters",
+                                                 "colocalized_events_in_noncolocalized_cluster",
+                                                 ])
     for item in files:
         name = item.split('.')[0]
         suffix = item.split('.')[-1]
-        if suffix == 'xlsx':
+        if suffix == 'xlsx' and 'statistics' not in name:
+            if name.split('_')[-1] == 'Ch1':
+                channel = 1
+            elif name.split('_')[-1] == 'Ch2':
+                channel = 2
+            else:
+                print("error in input file")
+                exit(-999)
+
             data = pd.read_excel(root_path + '/' + item)
             number_of_total_events = len(data)
             whether_cluster = data.groupby('ClusterID')
@@ -41,22 +66,50 @@ for root, dir, files in os.walk(root_path):
                     #     sum_number_of_events_in_noncolocalized_cluster += len(temp.get_group(0))
                     #     sum_number_of_total_colocalized_events += len(value[value['DOC'] > 0.4])
 
-            with open(root_path + '/' + name + '.txt', 'w') as f:  # 设置文件对象
-                L = []
-                L.append(["number_of_total_events\t", str(number_of_total_events), '\n'])
-                L.append(["number_of_non_clustered_events\t", str(number_of_non_clustered_events), '\n'])
-                L.append(["number_of_events_in_colocalized_cluster\t", str(sum_number_of_events_in_colocalized_cluster),
-                          '\n'])
-                L.append(
-                    ["number_of_events_in_noncolocalized_cluster\t",
-                     str(sum_number_of_events_in_noncolocalized_cluster), '\n'])
-                L.append(["number_of_total_colocalized_events\t", str(sum_number_of_total_colocalized_events), '\n'])
-                L.append(["number_of_noncluster_colocalized_event\t", str(sum_number_of_noncluster_colocalized_events),
-                          '\n'])
-                L.append(["number_of_colocalized_events_in_colocalized_clusters\t",
-                          str(sum_number_of_colocalized_events_in_colocalized_clusters), '\n'])
-                L.append(["number_of_colocalized_events_in_noncolocalized_cluste\t",
-                          str(sum_number_of_colocalized_events_in_noncolocalized_cluster), '\n'])
-                for i in L:
-                    f.writelines(i)
-            print("OK")
+            if channel == 1:
+                statistics_channel_1.loc[len(statistics_channel_1.index)] \
+                    = [number_of_total_events,
+                       number_of_non_clustered_events,
+                       sum_number_of_events_in_colocalized_cluster,
+                       sum_number_of_events_in_noncolocalized_cluster,
+                       sum_number_of_total_colocalized_events,
+                       sum_number_of_noncluster_colocalized_events,
+                       sum_number_of_colocalized_events_in_colocalized_clusters,
+                       sum_number_of_colocalized_events_in_noncolocalized_cluster
+                       ]
+            elif channel == 2:
+                statistics_channel_2.loc[len(statistics_channel_2.index)] \
+                    = [number_of_total_events,
+                       number_of_non_clustered_events,
+                       sum_number_of_events_in_colocalized_cluster,
+                       sum_number_of_events_in_noncolocalized_cluster,
+                       sum_number_of_total_colocalized_events,
+                       sum_number_of_noncluster_colocalized_events,
+                       sum_number_of_colocalized_events_in_colocalized_clusters,
+                       sum_number_of_colocalized_events_in_noncolocalized_cluster
+                       ]
+            # with open(root_path + '/' + name + '.txt', 'w') as f:  # 设置文件对象
+            #     L = []
+            #     L.append(["number_of_total_events\t", str(number_of_total_events), '\n'])
+            #     L.append(["number_of_non_clustered_events\t", str(number_of_non_clustered_events), '\n'])
+            #     L.append(["number_of_events_in_colocalized_cluster\t", str(sum_number_of_events_in_colocalized_cluster),
+            #               '\n'])
+            #     L.append(
+            #         ["number_of_events_in_noncolocalized_cluster\t",
+            #          str(sum_number_of_events_in_noncolocalized_cluster), '\n'])
+            #     L.append(["number_of_total_colocalized_events\t", str(sum_number_of_total_colocalized_events), '\n'])
+            #     L.append(["number_of_noncluster_colocalized_event\t", str(sum_number_of_noncluster_colocalized_events),
+            #               '\n'])
+            #     L.append(["number_of_colocalized_events_in_colocalized_clusters\t",
+            #               str(sum_number_of_colocalized_events_in_colocalized_clusters), '\n'])
+            #     L.append(["number_of_colocalized_events_in_noncolocalized_cluster\t",
+            #               str(sum_number_of_colocalized_events_in_noncolocalized_cluster), '\n'])
+            #     for i in L:
+            #         f.writelines(i)
+    print(statistics_channel_1.head())
+    print(statistics_channel_2.head())
+    output_name = root_path + '/' + "statistics.xlsx"
+    with pd.ExcelWriter(output_name) as writer:
+        statistics_channel_1.to_excel(writer, sheet_name='Chan1', index=False)
+        statistics_channel_2.to_excel(writer, sheet_name='Chan2', index=False)
+    print("OK")
