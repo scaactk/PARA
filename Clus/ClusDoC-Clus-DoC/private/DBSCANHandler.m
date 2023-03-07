@@ -67,7 +67,7 @@ try
             display1 = false;
             display2 = false;
             printOutFig = false;
-            clusterColor = rgb(46, 204, 113);
+            clusterColor = rgb(46, 204, 113); % (46, 204, 113) green
             maskVector = varargin{1};
         elseif nargin > 3
             % FullCalc mode
@@ -77,7 +77,9 @@ try
             display1 = varargin{3};
             display2 = varargin{4};
             printOutFig = true;
-            clusterColor = 'red'; % varargin{5} cluster 内部的颜色
+            % 原先无论哪个channel，原作者都指定其为red
+            % clusterColor ='red'; % varargin{5} cluster 内部的颜色
+            clusterColor = varargin{5};
             maskVector = varargin{6};
             
             printOutFigDest = 'DBSCAN Results';
@@ -116,11 +118,6 @@ try
         xsize = ceil (max(Data(:,1)) - min(Data(:,1)));
         ysize = ceil (max(Data(:,2)) - min(Data(:,2)));
         SizeROI = max([xsize, ysize]);
-        disp("yyyyyyyyyyyyyyyyyyyy")
-        xsize
-        ysize
-        SizeROI
-        size(Data, 1)
         
         try
             AvDensity = size(Data, 1)/(xsize*ysize);

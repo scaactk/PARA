@@ -342,8 +342,10 @@ function initializeParameters(varargin)
     handles.ROISize = 4000; % Length of ROI, in nm
 
     % Initialize some global settings
-    handles.Chan1Color = [46, 204, 113]/255; % Flat UI Emerald
-    handles.Chan2Color = [231, 76, 60]/255; % Flat UI Alizarin
+    % [46, 204, 113] green
+    % [231, 76, 60] red
+    handles.Chan1Color = [231, 76, 60]/255; % Flat UI Emerald   
+    handles.Chan2Color = [46, 204, 113]/255; % Flat UI Alizarin
     handles.UnselectedROIColor = [142, 68, 173]/255; % Flat UI Peter River
     handles.ROIColor = [40, 142, 230]/255; % Flat UI Amethyst
     
@@ -2335,10 +2337,10 @@ function DBSCAN_All(~, ~, ~)
                 ClusterSmoothTable = cell(max(cell2mat(cellfun(@length, handles.ROICoordinates, 'uniformoutput', false))), ...
                     size(handles.CellData, 1));
             
-                for c = 1:size(handles.CellData, 1);  %第一维度，估计是统计数量
+                for c = 1:size(handles.CellData, 1)  %第一维度，估计是统计数量
 
 
-                    for roiInc = 1:length(handles.ROICoordinates{c}); % 画框的区域
+                    for roiInc = 1:length(handles.ROICoordinates{c}) % 画框的区域
 
                         roi = handles.ROICoordinates{c}{roiInc};
 
@@ -2365,7 +2367,7 @@ function DBSCAN_All(~, ~, ~)
                                 );
                             % DBSCANHandle [datathr, ClusterSmooth, SumofContour, classOut, varargout] = DBSCANHandler(Data, DBSCANParams, varargin)
                             
-                            disp("Result:   ", Result)
+                            % disp("Result:   ", Result);
 
                             handles.CellData{c}(whichPointsInROI & (handles.CellData{c}(:,12) == chan), handles.NDataColumns + 3) = classOut;
                             % Result is stats per ROI
@@ -2419,7 +2421,7 @@ function DBSCAN_All(~, ~, ~)
             set(handles.handles.ExportResultsButton, 'enable', 'on');
             
             guidata(handles.handles.MainFig, handles);
-%             handles.ClusterTable = AppendToClusterTable(ClusterTableChan1, ClusterTableChan2);
+            handles.ClusterTable = AppendToClusterTable(ClusterTableChan1, ClusterTableChan2);
                             
         catch mError
             
@@ -2435,7 +2437,7 @@ function DBSCAN_All(~, ~, ~)
             assignin('base', 'outputFolder', strcat(handles.Outputfolder, '\DBSCAN Results'));
             assignin('base', 'chan', chan);
             
-            display('DBSCAN processing exited with errors.');
+            disp('DBSCAN processing exited with errors.');
             rethrow(mError);
 
         end
