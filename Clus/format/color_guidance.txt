@@ -1,0 +1,5 @@
+new color guidance
+red3dlp -> channel 1 -> red
+grn3dlp -> channel 2 -> green
+
+rollback findallformat to old version, so data been coverted before this week is fine
