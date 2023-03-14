@@ -344,8 +344,9 @@ function initializeParameters(varargin)
     % Initialize some global settings
     % [46, 204, 113] green
     % [231, 76, 60] red
-    handles.Chan1Color = [231, 76, 60]/255; % Flat UI Emerald   
-    handles.Chan2Color = [46, 204, 113]/255; % Flat UI Alizarin
+    % 应该是channel 2 红色。channel 1 绿色
+    handles.Chan1Color = [46, 204, 113]/255; % Flat UI Emerald   
+    handles.Chan2Color = [231, 76, 60]/255; % Flat UI Alizarin
     handles.UnselectedROIColor = [142, 68, 173]/255; % Flat UI Peter River
     handles.ROIColor = [40, 142, 230]/255; % Flat UI Amethyst
     

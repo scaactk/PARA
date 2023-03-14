@@ -33,8 +33,8 @@ def doFormat(path, name):
         flagGRN = 1
 
     if flagRed == 1 and flagGRN == 1:
-        channel_red = 1
-        channel_grn = 2
+        channel_red = 2
+        channel_grn = 1
     elif (flagRed * flagGRN) == 0:  # if only one input file, mark its channel as 1
         channel_red = 1
         channel_grn = 1
@@ -82,7 +82,7 @@ def doFormat(path, name):
 
     # --------------------------------------------------------------------
     if flagRed == 1 and flagGRN == 1:
-        total = pd.concat([rawRed, rawGRN], axis=0)
+        total = pd.concat([rawGRN, rawRed], axis=0)
     elif flagRed == 1 and flagGRN == 0:
         total = rawRed
     elif flagRed == 0 and flagGRN == 1:
