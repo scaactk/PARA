@@ -42,14 +42,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.find_ColCluster">
+  <component name="RunManager">
     <configuration name="find_ColCluster" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="PARA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="D:\miniconda\envs\tf2\python.exe" />
       <option name="SDK_NAME" value="D:\miniconda\envs\tf2" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Clus/GroupbyDoc" />
@@ -111,6 +108,7 @@
       <workItem from="1678316667854" duration="19000" />
       <workItem from="1678759312550" duration="803000" />
       <workItem from="1678765910027" duration="13000" />
+      <workItem from="1679356907859" duration="2254000" />
     </task>
     <servers />
   </component>
@@ -130,8 +128,10 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/find_ColCluster_py$statistics.coverage" NAME="statistics Coverage Results" MODIFIED="1677958550302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
+    <SUITE FILE_PATH="coverage/statistics_py$statistics.coverage" NAME="statistics Coverage Results" MODIFIED="1679359310234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
     <SUITE FILE_PATH="coverage/PARA$find_ColClsuter.coverage" NAME="find_ColClsuter Coverage Results" MODIFIED="1675912843031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
     <SUITE FILE_PATH="coverage/test_py$test.coverage" NAME="test Coverage Results" MODIFIED="1678760119101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/20220911/test" />
     <SUITE FILE_PATH="coverage/find_ColCluster_py$find_ColCluster.coverage" NAME="find_ColCluster Coverage Results" MODIFIED="1677858243465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
+    <SUITE FILE_PATH="coverage/statistics_py$statistics1.coverage" NAME="statistics1 Coverage Results" MODIFIED="1679359383180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
   </component>
 </project>
