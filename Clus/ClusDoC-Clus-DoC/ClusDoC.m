@@ -2404,8 +2404,6 @@ function DBSCAN_All(~, ~, ~)
                     fprintf(1, 'All cells and ROIs empty.  Skipping export.\n');
                 end
                 
-                disp("Channel: ")
-                chan
                 if chan == 1
                     ClusterTableChan1 = ClusterSmoothTable;
                 elseif chan == 2
@@ -2538,7 +2536,7 @@ function DoC_All(~, ~, ~)
             
             % 先算 DBSCAN，然后才 DoC
             % Run DBSCAN on data used for DoC analysis
-            [ClusterTableCh1, ClusterTableCh2, clusterIDOut, handles.ClusterTable] = DBSCANonDoCResults(handles.CellData, handles.ROICoordinates, ...
+            [ClusterTableCh1, ClusterTableCh2, clusterIDOut, handles.ClusterTable, background_densityCell] = DBSCANonDoCResults(handles.CellData, handles.ROICoordinates, ...
                 strcat(handles.Outputfolder, '\Clus-DoC Results'), handles.Chan1Color, handles.Chan2Color, dbscanParams, handles.NDataColumns);
             
             if ~isfield(handles, 'ClusterSmoothTables')
@@ -2560,8 +2558,8 @@ function DoC_All(~, ~, ~)
             % EvalStatisticsOnDBSCANandDoCResults.m does in ClusterTable.  Let's see
             % if/when it falls apart
             
-            EvalStatisticsOnDBSCANandDoCResults(ClusterTableCh1, 1, strcat(handles.Outputfolder, '\Clus-DoC Results'));
-            EvalStatisticsOnDBSCANandDoCResults(ClusterTableCh2, 2, strcat(handles.Outputfolder, '\Clus-DoC Results'));
+            EvalStatisticsOnDBSCANandDoCResults(ClusterTableCh1, 1, strcat(handles.Outputfolder, '\Clus-DoC Results'), background_densityCell(:,1));
+            EvalStatisticsOnDBSCANandDoCResults(ClusterTableCh2, 2, strcat(handles.Outputfolder, '\Clus-DoC Results'), background_densityCell(:,2));
             
             guidata(handles.handles.MainFig, handles);
             

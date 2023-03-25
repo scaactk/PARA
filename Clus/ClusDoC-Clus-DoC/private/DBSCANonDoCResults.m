@@ -1,4 +1,4 @@
-function [ClusterSmoothTableCh1, ClusterSmoothTableCh2, clusterIDOut, clusterTable] = DBSCANonDoCResults(CellData, ROICoordinates, Path_name, Chan1Color, Chan2Color, dbscanParamsPassed, NDatacolumns, clusterTable)
+function [ClusterSmoothTableCh1, ClusterSmoothTableCh2, clusterIDOut, clusterTable, background_densityCell] = DBSCANonDoCResults(CellData, ROICoordinates, Path_name, Chan1Color, Chan2Color, dbscanParamsPassed, NDatacolumns, clusterTable)
 % Routine to apply DBSCAN on the Degree of Colocalisation Result for
 
 
@@ -22,6 +22,7 @@ ResultCell = cell(max(cellfun(@length, ROICoordinates)), length(CellData)); % it
 clusterIDOut = cell(max(cellfun(@length, ROICoordinates)), length(CellData), 2);
 
 AvReDen2Cell = cell(max(cellfun(@length, ROICoordinates)), 2); % roi as row, chan as col...
+background_densityCell = cell(max(cellfun(@length, ROICoordinates)), 2);
 
 clusterTable = [];
 
@@ -100,6 +101,7 @@ clusterTable = [];
                     roiHere = ROICoordinates{cellIter}{roiIter};
                     SizeROI = polyarea(roiHere(:,1), roiHere(:,2));
                     background_density = length(ROI_non_cluster) / SizeROI;
+                    background_densityCell{roiIter,Ch} = background_density;
 
                     if ~exist(fullfile(Path_name, '\ROI_set'), 'dir')
                         mkdir(fullfile(Path_name, '\ROI_set'));
@@ -172,7 +174,7 @@ clusterTable = [];
 save(fullfile(Path_name, 'DBSCAN Clus-DoC Results.mat'),'ClusterSmoothTableCh1','ClusterSmoothTableCh2');
 end
 
-function [clusterTableOut, ClusterCh, average_relative_density2] = AppendToClusterTableInternal(clusterTable, Ch, cellIter, roiIter, ClusterCh, classOut, background_density);
+function [clusterTableOut, ClusterCh, average_relative_density2] = AppendToClusterTableInternal(clusterTable, Ch, cellIter, roiIter, ClusterCh, classOut, background_density)
 
     try 
         if isempty(clusterTable)
@@ -190,7 +192,7 @@ function [clusterTableOut, ClusterCh, average_relative_density2] = AppendToClust
         end
 
         % Add new data to the clusterTable
-        appendTable = zeros(length(ClusterCh), 15);
+        appendTable = zeros(length(ClusterCh), 17);
         appendTable(:, 1) = cellIter; % CurrentROI
         appendTable(:, 2) = roiIter; % CurrentROI
         appendTable(:, 3) = Ch; % Channel
@@ -214,6 +216,7 @@ function [clusterTableOut, ClusterCh, average_relative_density2] = AppendToClust
 
         appendTable(:, 16) = appendTable(:, 5) ./ appendTable(:, 8);  % absolute density
         appendTable(:, 17) = appendTable(:, 16) / background_density; % relative density 2
+        %appendTable(:, 18) = background_density;
         
         [r, c] = size(ClusterCh);
         sum_ab = 0;
