@@ -35,4 +35,16 @@ root_path = r"D:\GithubRepository\PARA\Clus\20220911\test\Clus-DoC Results\ROI_s
 conda activate clus    # this step is to activate the environment
 python statistics.py    # this step is to run the script
 
+--------------------------for insert_clus_doc.py---------------------------------
+change the path to your target folde
+raw_path_size = r"D:\GithubRepository\PARA\Clus\20220911\test\Clus-DoC Results\DBSCAN Results\DBSCAN Results.xls"
+
+# run
+conda activate clus
+python insert_clus_doc.py
+
+#warning
+the output file are end in "xls", if you open it in a new version of Excel
+output file: Clus-DoC Ch1.xls & Clus-DoC Ch2.xls
+you may got a warning for extension, ignore that or change the extension from 'xls' to 'xlsx'
 
