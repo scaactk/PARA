@@ -4,7 +4,53 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="348d24e0-b2d0-4c80-bef4-181e764cc145" name="Changes" comment="" />
+    <list default="true" id="348d24e0-b2d0-4c80-bef4-181e764cc145" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/Clus-DoC Ch1.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/Clus-DoC Ch1.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/Clus-DoC Ch2.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/Clus-DoC Ch2.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Clus-DoC Results.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Clus-DoC Results.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/Ch1/Cluster maps/Cell1_Region1Region_with_Cluster.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/Ch1/Cluster maps/Cell1_Region1Region_with_Cluster.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/Ch1/Cluster maps/Cell1_Region2Region_with_Cluster.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/Ch1/Cluster maps/Cell1_Region2Region_with_Cluster.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/Ch2/Cluster maps/Cell1_Region1Region_with_Cluster.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/Ch2/Cluster maps/Cell1_Region1Region_with_Cluster.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/Ch2/Cluster maps/Cell1_Region2Region_with_Cluster.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/Ch2/Cluster maps/Cell1_Region2Region_with_Cluster.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/DBSCAN Results Chan1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/DBSCAN Results Chan2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/DBSCAN Results.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/DBSCAN Results.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/Data_for_Cluster_Analysis.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/Data_for_Cluster_Analysis.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Results.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Results.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Density and DoC maps/Table_1_Region_1Density_Ch1.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Density and DoC maps/Table_1_Region_1Density_Ch1.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Density and DoC maps/Table_1_Region_1Density_Ch2.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Density and DoC maps/Table_1_Region_1Density_Ch2.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Density and DoC maps/Table_1_Region_1DoC_Ch1.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Density and DoC maps/Table_1_Region_1DoC_Ch1.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Density and DoC maps/Table_1_Region_1DoC_Ch2.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Density and DoC maps/Table_1_Region_1DoC_Ch2.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Density and DoC maps/Table_1_Region_2Density_Ch1.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Density and DoC maps/Table_1_Region_2Density_Ch1.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Density and DoC maps/Table_1_Region_2Density_Ch2.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Density and DoC maps/Table_1_Region_2Density_Ch2.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Density and DoC maps/Table_1_Region_2DoC_Ch1.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Density and DoC maps/Table_1_Region_2DoC_Ch1.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Density and DoC maps/Table_1_Region_2DoC_Ch2.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Density and DoC maps/Table_1_Region_2DoC_Ch2.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Raw data maps with outliers removed/Table_1_Region_1Outliers.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Raw data maps with outliers removed/Table_1_Region_1Outliers.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Raw data maps with outliers removed/Table_1_Region_2Outliers.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Raw data maps with outliers removed/Table_1_Region_2Outliers.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Raw data maps/Table_1_Region_1Raw_data.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Raw data maps/Table_1_Region_1Raw_data.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Raw data maps/Table_1_Region_2Raw_data.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Statistics and Plots/Raw data maps/Table_1_Region_2Raw_data.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC histograms/Pooled DoC histogram.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC histograms/Pooled DoC histogram.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC histograms/Table_1_Region_1_Hist.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC histograms/Table_1_Region_1_Hist.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC histograms/Table_1_Region_2_Hist.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC histograms/Table_1_Region_2_Hist.tif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ROI_set/ROI_1_all_events_Ch1.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ROI_set/ROI_1_all_events_Ch1.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ROI_set/ROI_1_all_events_Ch2.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ROI_set/ROI_1_all_events_Ch2.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ROI_set/ROI_2_all_events_Ch1.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ROI_set/ROI_2_all_events_Ch1.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ROI_set/ROI_2_all_events_Ch2.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ROI_set/ROI_2_all_events_Ch2.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ROI_set/after_col_mark/ROI_1_all_events_Ch1.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ROI_set/after_col_mark/ROI_1_all_events_Ch1.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ROI_set/after_col_mark/ROI_1_all_events_Ch2.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ROI_set/after_col_mark/ROI_1_all_events_Ch2.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ROI_set/after_col_mark/ROI_2_all_events_Ch1.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ROI_set/after_col_mark/ROI_2_all_events_Ch1.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ROI_set/after_col_mark/ROI_2_all_events_Ch2.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ROI_set/after_col_mark/ROI_2_all_events_Ch2.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ROI_set/after_col_mark/statistics.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ROI_set/after_col_mark/statistics.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ROI_set/after_col_mark/statistics1.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ROI_set/after_col_mark/statistics1.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ResultCh1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ResultCh1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ResultCh2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ResultCh2.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ResultTable.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ResultTable.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/ClusDoC-Clus-DoC/private/DBSCANonDoCResults.m" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/ClusDoC-Clus-DoC/private/DBSCANonDoCResults.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/ClusDoC-Clus-DoC/private/EvalStatisticsOnDBSCANandDoCResults.m" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/ClusDoC-Clus-DoC/private/EvalStatisticsOnDBSCANandDoCResults.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/ClusDoC-Clus-DoC/private/ExportDBSCANDataToExcelFiles.m" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/ClusDoC-Clus-DoC/private/ExportDBSCANDataToExcelFiles.m" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +84,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -109,6 +155,11 @@
       <workItem from="1678759312550" duration="803000" />
       <workItem from="1678765910027" duration="13000" />
       <workItem from="1679356907859" duration="2254000" />
+      <workItem from="1679776416349" duration="95000" />
+      <workItem from="1679776536567" duration="129000" />
+      <workItem from="1679776715459" duration="229000" />
+      <workItem from="1679795714371" duration="5000000" />
+      <workItem from="1679802184443" duration="792000" />
     </task>
     <servers />
   </component>
@@ -128,10 +179,16 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/find_ColCluster_py$statistics.coverage" NAME="statistics Coverage Results" MODIFIED="1677958550302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
-    <SUITE FILE_PATH="coverage/statistics_py$statistics.coverage" NAME="statistics Coverage Results" MODIFIED="1679359310234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
+    <SUITE FILE_PATH="coverage/statistics_py$statistics.coverage" NAME="statistics Coverage Results" MODIFIED="1679795828523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
     <SUITE FILE_PATH="coverage/PARA$find_ColClsuter.coverage" NAME="find_ColClsuter Coverage Results" MODIFIED="1675912843031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
+    <SUITE FILE_PATH="coverage/insert_clus_doc_py$statistics1.coverage" NAME="statistics1 Coverage Results" MODIFIED="1679802405341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
+    <SUITE FILE_PATH="coverage/statistics_py$find_ColCluster.coverage" NAME="find_ColCluster Coverage Results" MODIFIED="1679795805573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
+    <SUITE FILE_PATH="coverage/insert_clus_doc_py$insert_clus_doc.coverage" NAME="insert_clus_doc Coverage Results" MODIFIED="1679802965614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
     <SUITE FILE_PATH="coverage/test_py$test.coverage" NAME="test Coverage Results" MODIFIED="1678760119101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/20220911/test" />
+    <SUITE FILE_PATH="coverage/statistics_py$insert_clus_doc.coverage" NAME="insert_clus_doc Coverage Results" MODIFIED="1679801731600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
+    <SUITE FILE_PATH="coverage/insert_clus_doc_py$find_ColCluster.coverage" NAME="find_ColCluster Coverage Results" MODIFIED="1679802394904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
     <SUITE FILE_PATH="coverage/find_ColCluster_py$find_ColCluster.coverage" NAME="find_ColCluster Coverage Results" MODIFIED="1677858243465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
-    <SUITE FILE_PATH="coverage/statistics_py$statistics1.coverage" NAME="statistics1 Coverage Results" MODIFIED="1679359383180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
+    <SUITE FILE_PATH="coverage/statistics_py$statistics1.coverage" NAME="statistics1 Coverage Results" MODIFIED="1679795837456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
+    <SUITE FILE_PATH="coverage/insert_clus_doc_py$statistics.coverage" NAME="statistics Coverage Results" MODIFIED="1679802400255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
   </component>
 </project>

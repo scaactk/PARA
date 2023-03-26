@@ -166,7 +166,7 @@ clusterTable = [];
 %         assignin('base', 'p', cellIter);
 %         assignin('base', 'q', roiIter);
         
-        ExportDBSCANDataToExcelFiles(cellROIPair, ResultCell, strcat(Path_name, '\DBSCAN Results'), Ch, AvReDen2Cell);
+        ExportDBSCANDataToExcelFiles(cellROIPair, ResultCell, strcat(Path_name, '\DBSCAN Results'), Ch, AvReDen2Cell, background_densityCell);
 
     end % channel
 
