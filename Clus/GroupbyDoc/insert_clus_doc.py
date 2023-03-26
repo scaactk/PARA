@@ -21,9 +21,9 @@ for chan in ['Chan1', 'Chan2']:
 
     # save to excel
     if chan == 'Chan1':
-        raw_data.to_excel(target_path1, index=False, sheet_name="Clus-DoC results", engine='xlwt')
+        raw_data.to_excel(target_path1, index=False, sheet_name="Clus-DoC results")
     elif chan == 'Chan2':
-        raw_data.to_excel(target_path2, index=False, sheet_name="Clus-DoC results", engine='xlwt')
+        raw_data.to_excel(target_path2, index=False, sheet_name="Clus-DoC results")
 
 print("OK")
 
