@@ -36,7 +36,7 @@ conda activate clus    # this step is to activate the environment
 python statistics.py    # this step is to run the script
 
 --------------------------for insert_clus_doc.py---------------------------------
-change the path to your target folde
+change the path to your target folder
 raw_path_size = r"D:\GithubRepository\PARA\Clus\20220911\test\Clus-DoC Results\DBSCAN Results\DBSCAN Results.xls"
 
 # run

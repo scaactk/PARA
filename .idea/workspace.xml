@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="348d24e0-b2d0-4c80-bef4-181e764cc145" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/Clus-DoC Ch1.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/Clus-DoC Ch1.xls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/Clus-DoC Ch2.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/Clus-DoC Ch2.xls" afterDir="false" />
@@ -14,8 +13,6 @@
       <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/Ch1/Cluster maps/Cell1_Region2Region_with_Cluster.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/Ch1/Cluster maps/Cell1_Region2Region_with_Cluster.tif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/Ch2/Cluster maps/Cell1_Region1Region_with_Cluster.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/Ch2/Cluster maps/Cell1_Region1Region_with_Cluster.tif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/Ch2/Cluster maps/Cell1_Region2Region_with_Cluster.tif" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/Ch2/Cluster maps/Cell1_Region2Region_with_Cluster.tif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/DBSCAN Results Chan1.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/DBSCAN Results Chan2.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/DBSCAN Results.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DBSCAN Results/DBSCAN Results.xls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/Data_for_Cluster_Analysis.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/Data_for_Cluster_Analysis.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Results.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/DoC Results.xls" afterDir="false" />
@@ -47,9 +44,9 @@
       <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ResultCh1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ResultCh1.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ResultCh2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ResultCh2.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ResultTable.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/20220911/test/Clus-DoC Results/ResultTable.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clus/ClusDoC-Clus-DoC/private/DBSCANonDoCResults.m" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/ClusDoC-Clus-DoC/private/DBSCANonDoCResults.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Clus/ClusDoC-Clus-DoC/private/EvalStatisticsOnDBSCANandDoCResults.m" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/ClusDoC-Clus-DoC/private/EvalStatisticsOnDBSCANandDoCResults.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clus/ClusDoC-Clus-DoC/private/ExportDBSCANDataToExcelFiles.m" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/ClusDoC-Clus-DoC/private/ExportDBSCANDataToExcelFiles.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/GroupbyDoc/insert_clus_doc.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/GroupbyDoc/insert_clus_doc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clus/GroupbyDoc/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/GroupbyDoc/readme.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,6 +157,7 @@
       <workItem from="1679776715459" duration="229000" />
       <workItem from="1679795714371" duration="5000000" />
       <workItem from="1679802184443" duration="792000" />
+      <workItem from="1679946314288" duration="137000" />
     </task>
     <servers />
   </component>
@@ -181,14 +179,14 @@
     <SUITE FILE_PATH="coverage/find_ColCluster_py$statistics.coverage" NAME="statistics Coverage Results" MODIFIED="1677958550302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
     <SUITE FILE_PATH="coverage/statistics_py$statistics.coverage" NAME="statistics Coverage Results" MODIFIED="1679795828523" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
     <SUITE FILE_PATH="coverage/PARA$find_ColClsuter.coverage" NAME="find_ColClsuter Coverage Results" MODIFIED="1675912843031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
-    <SUITE FILE_PATH="coverage/insert_clus_doc_py$statistics1.coverage" NAME="statistics1 Coverage Results" MODIFIED="1679802405341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
+    <SUITE FILE_PATH="coverage/insert_clus_doc_py$statistics1.coverage" NAME="statistics1 Coverage Results" MODIFIED="1679946342657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
     <SUITE FILE_PATH="coverage/statistics_py$find_ColCluster.coverage" NAME="find_ColCluster Coverage Results" MODIFIED="1679795805573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
-    <SUITE FILE_PATH="coverage/insert_clus_doc_py$insert_clus_doc.coverage" NAME="insert_clus_doc Coverage Results" MODIFIED="1679802965614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
+    <SUITE FILE_PATH="coverage/insert_clus_doc_py$insert_clus_doc.coverage" NAME="insert_clus_doc Coverage Results" MODIFIED="1679946440229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
     <SUITE FILE_PATH="coverage/test_py$test.coverage" NAME="test Coverage Results" MODIFIED="1678760119101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/20220911/test" />
     <SUITE FILE_PATH="coverage/statistics_py$insert_clus_doc.coverage" NAME="insert_clus_doc Coverage Results" MODIFIED="1679801731600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
     <SUITE FILE_PATH="coverage/insert_clus_doc_py$find_ColCluster.coverage" NAME="find_ColCluster Coverage Results" MODIFIED="1679802394904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
     <SUITE FILE_PATH="coverage/find_ColCluster_py$find_ColCluster.coverage" NAME="find_ColCluster Coverage Results" MODIFIED="1677858243465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
     <SUITE FILE_PATH="coverage/statistics_py$statistics1.coverage" NAME="statistics1 Coverage Results" MODIFIED="1679795837456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
-    <SUITE FILE_PATH="coverage/insert_clus_doc_py$statistics.coverage" NAME="statistics Coverage Results" MODIFIED="1679802400255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
+    <SUITE FILE_PATH="coverage/insert_clus_doc_py$statistics.coverage" NAME="statistics Coverage Results" MODIFIED="1679946333215" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Clus/GroupbyDoc" />
   </component>
 </project>

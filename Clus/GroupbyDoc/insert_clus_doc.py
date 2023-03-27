@@ -16,8 +16,8 @@ for chan in ['Chan1', 'Chan2']:
     elif chan == 'Chan2':
         raw_data = pd.read_excel(target_path2, sheet_name="Clus-DoC results")
 
-    raw_data['Relative density 2 of colocalized cluster'] = raw_data['Mean number of colocalised clusters per ROI'] / raw_data['Average area of colicalised clusters (nm^2)'] / background_density
-    raw_data['Relative density 2 of non-colocalized cluster'] = raw_data['Mean number of non-colocalised clusters per ROI'] / raw_data['Average area of non-colicalised clusters (nm^2)'] / background_density
+    raw_data['Relative density 2 of colocalized cluster'] = raw_data['Mean number of molecules per colocalised cluster'] / raw_data['Average area of colicalised clusters (nm^2)'] / background_density
+    raw_data['Relative density 2 of non-colocalized cluster'] = raw_data['Mean number of molecules per non-colocalised cluster'] / raw_data['Average area of non-colicalised clusters (nm^2)'] / background_density
 
     # save to excel
     if chan == 'Chan1':
