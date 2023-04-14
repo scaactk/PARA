@@ -121,6 +121,6 @@ def findAllFile(base, Range):  # 20220911
 
 
 #  keep the r before '***'
-father_path = r"C:/Users/tjut_/Desktop/20220911"  # now do not need to change '/' and '\' in path,
+father_path = r"C:/Users/tjut_/Desktop/test"  # now do not need to change '/' and '\' in path,
 Range = input("Please input the ID of folder: ")
 findAllFile(father_path, Range)
