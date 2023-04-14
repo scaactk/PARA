@@ -1,0 +1,10 @@
+Instructions on Hopkin's analysis. 
+
+Matlab code path: C:\Users\LIULAB\Desktop\PARA\Ki Woong Script_modify for multiple Ripley; (The code also run Ripley's analysis. You may skip it. We can get the Ripley's in clusdoc)
+Run Rip_Hop_multiple_ROI_jx.m: 
+1) Hit the green arrow; 
+2) select the 3dlp file for Hopkin's analysis.
+3) The code asks the total number of ROIs you will analyze. Put any number. We do 10 ROIs per cell in general. 
+4) Select your ROIs. You will notice a new ROI number will be refreshed under the command window. 
+5) Once you selected the preset number of ROIs, the code will start Hopkins' analysis. you will see histograms showing up. and status is updated in the command window. 
+6) Results are saved in a folder "result" in the same folder as the input 3dlp file. The results of each region contain a histogram plot (.fig; .jpg) and a csv file. The csv file contains 4 numbers, they are 25%, 50% (median) and 75% percentile, mean. Transfer median and mean to prism and plot them. 
