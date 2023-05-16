@@ -162,6 +162,15 @@ function EvalStatisticsOnDBSCANandDoCResults(ClusterSmoothTableCh, Ch, outputFol
          {'Relative density 2 of non-colocalized cluster'}
          ];
     
+    checklist = {MeanNumMolsPerColocCluster, NumColocClustersPerROI,...
+        MeanNumMolsPerNonColocCluster, NumNonColocClustersPerROI};
+    for i =1:numel(checklist)
+        checklist{i} = cellfun(@(x) replace_empty(x), checklist{i});
+    end
+    
+    
+    
+
     Matrix_Result=[
         DensityDofC,...
         Density2,...
@@ -190,7 +199,9 @@ function EvalStatisticsOnDBSCANandDoCResults(ClusterSmoothTableCh, Ch, outputFol
 
  
 end
-    
+
+
+
     
 
     
