@@ -133,6 +133,12 @@ function EvalStatisticsOnDBSCANandDoCResults(ClusterSmoothTableCh, Ch, outputFol
     %% Convert to excel file
     
     % Density Area Circularity for cluster with DofC>0.4
+    check_list = {MeanDensityDofC(:), MeanAreaDofC(:), MeanCircularityDofC(:),...
+        MeanDensity2(:), MeanArea2(:), MeanCircularity2(:)};
+    for i=1:numel(check_list)
+        check_list{i} = cellfun(@(x) replace_empty(x), check_list{i});
+    end
+
     DensityDofC = cell2mat(MeanDensityDofC(:));
     AreaDofC = cell2mat(MeanAreaDofC(:));
     CircularityDofC = cell2mat(MeanCircularityDofC(:));
@@ -167,8 +173,6 @@ function EvalStatisticsOnDBSCANandDoCResults(ClusterSmoothTableCh, Ch, outputFol
     for i =1:numel(checklist)
         checklist{i} = cellfun(@(x) replace_empty(x), checklist{i});
     end
-    
-    
     
 
     Matrix_Result=[
