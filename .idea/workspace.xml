@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="348d24e0-b2d0-4c80-bef4-181e764cc145" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Clus/GroupbyDoc/cal_mean_ch2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Clus/GroupbyDoc/cal_mean.py" beforeDir="false" afterPath="$PROJECT_DIR$/Clus/GroupbyDoc/cal_mean.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,26 +44,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/GithubRepository/PARA/Clus/GroupbyDoc/cal_mean.py&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/scaactk/Desktop/JJ_Raman_Spectrosopy-main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="Python.find_ColCluster">
     <configuration name="cal_mean" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="PARA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="D:\miniconda3\envs\tf2\python.exe" />
       <option name="SDK_NAME" value="tf2" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Clus/GroupbyDoc" />
@@ -159,7 +160,9 @@
       <workItem from="1682134004376" duration="12000" />
       <workItem from="1683173717532" duration="30000" />
       <workItem from="1683252293300" duration="6653000" />
-      <workItem from="1683506004684" duration="2664000" />
+      <workItem from="1683506004684" duration="3488000" />
+      <workItem from="1683646294264" duration="9000" />
+      <workItem from="1683647135616" duration="22000" />
     </task>
     <servers />
   </component>
