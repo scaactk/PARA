@@ -701,7 +701,7 @@ function Load_Data(~,~,~)
                 % files
                 handles.MaxSize = importData.Footer{2}(5)*10*importData.Footer{2}(1)/importData.Footer{2}(3); % FOV size, in nm
                 
-                if handles.MaxSize == 256;
+                if handles.MaxSize == 256
                     handles.MaxSize = handles.MaxSize*100;
                 end
                 
