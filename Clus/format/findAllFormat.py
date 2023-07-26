@@ -43,7 +43,7 @@ def doFormat(path, name):
         exit()
 
     if flagRed == 1:  # red exist
-        rawRed = pd.read_csv(os.path.join(path, "Red.3dlp"), skiprows=0, header=None, sep='   ', usecols=[0, 1])
+        rawRed = pd.read_csv(os.path.join(path, "Red.3dlp"), skiprows=0, header=None, sep='\s+', usecols=[0, 1])
         rawRed.columns = ['Position X [nm]', 'Position Y [nm]']
         rawRed.astype(int)
 
@@ -63,7 +63,7 @@ def doFormat(path, name):
     # Same to GRN
 
     if flagGRN == 1:  # grn exist
-        rawGRN = pd.read_csv(os.path.join(path, "GRN.3dlp"), skiprows=0, header=None, sep='   ', usecols=[0, 1])
+        rawGRN = pd.read_csv(os.path.join(path, "GRN.3dlp"), skiprows=0, header=None, sep='\s+', usecols=[0, 1])
         rawGRN.columns = ['Position X [nm]', 'Position Y [nm]']
         rawGRN.astype(int)
 
