@@ -28,13 +28,13 @@ def doFormat(path, name):
     if os.path.exists(pathGRN):
         flagGRN = 1
 
-    color_RED = 4294901760
-    color_GRN = 4278255360
+    color_RED = 16711680
+    color_GRN = 65280
     if flagRED == 1:
         raw_RED = pd.read_csv(os.path.join(path, "Red.3dlp"), skiprows=0, header=None, sep='\s+', usecols=[0, 1, 2])
         raw_RED.columns = ['X', 'Y', 'Z']
 
-        raw_RED.insert(3, 'RGB', color_RED)
+        raw_RED.insert(3, 'R', color_RED)
         raw_RED.astype(float)
         # print(raw_RED.head())
 
@@ -68,7 +68,7 @@ def doFormat(path, name):
                    "VERSION 0.7\n"
                    "FIELDS x y z rgb\n"
                    "SIZE 4 4 4 4\n"
-                   "TYPE F F F F\n"
+                   "TYPE F F F U\n"
                    "COUNT 1 1 1 1\n"
                    "WIDTH ")
         file.write(str(total.shape[0]) + "\n"
@@ -92,6 +92,6 @@ def format2pcd(base, Range):
 
 
 #  keep the r before '***'
-father_path = r"C:/Users/tjut_/Desktop/test"  # now do not need to change '/' and '\' in path,
+father_path = r"C:\Users\scaactk\Desktop\test"  # now do not need to change '/' and '\' in path,
 Range = input("Please input the ID of folder: ")
 format2pcd(father_path, Range)
