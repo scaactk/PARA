@@ -139,14 +139,23 @@ function EvalStatisticsOnDBSCANandDoCResults(ClusterSmoothTableCh, Ch, outputFol
         check_list{i} = cellfun(@(x) replace_empty(x), check_list{i});
     end
 
-    DensityDofC = cell2mat(MeanDensityDofC(:));
-    AreaDofC = cell2mat(MeanAreaDofC(:));
-    CircularityDofC = cell2mat(MeanCircularityDofC(:));
+    DensityDofC = check_list{1};
+    AreaDofC = check_list{2};
+    CircularityDofC = check_list{3};
     
     % Density Area Circularity for cluster with DofC<0.4
-    Density2 = cell2mat(MeanDensity2(:));
-    Area2 = cell2mat(MeanArea2(:));
-    Circularity2 = cell2mat(MeanCircularity2(:));
+    Density2 = check_list{4};
+    Area2 = check_list{5};
+    Circularity2 = check_list{6};
+    
+%     DensityDofC = cell2mat(MeanDensityDofC(:));
+%     AreaDofC = cell2mat(MeanAreaDofC(:));
+%     CircularityDofC = cell2mat(MeanCircularityDofC(:));
+%     
+%     % Density Area Circularity for cluster with DofC<0.4
+%     Density2 = cell2mat(MeanDensity2(:));
+%     Area2 = cell2mat(MeanArea2(:));
+%     Circularity2 = cell2mat(MeanCircularity2(:));
 
     
     % Density Area Circularity for cluster with Nb<NbThresh 
@@ -173,6 +182,11 @@ function EvalStatisticsOnDBSCANandDoCResults(ClusterSmoothTableCh, Ch, outputFol
     for i =1:numel(checklist)
         checklist{i} = cellfun(@(x) replace_empty(x), checklist{i});
     end
+
+    MeanNumMolsPerColocCluster = checklist{1};
+    NumColocClustersPerROI = checklist{2};
+    MeanNumMolsPerNonColocCluster = checklist{3};
+    NumNonColocClustersPerROI = checklist{4};
     
 
     Matrix_Result=[
@@ -182,14 +196,16 @@ function EvalStatisticsOnDBSCANandDoCResults(ClusterSmoothTableCh, Ch, outputFol
         Area2,...
         CircularityDofC,...
         Circularity2, ...
-        cell2mat(MeanNumMolsPerColocCluster(:)), ...
-        cell2mat(NumColocClustersPerROI(:)), ...
-        cell2mat(MeanNumMolsPerNonColocCluster(:)), ...
-        cell2mat(NumNonColocClustersPerROI(:)),...
-        cell2mat(MeanNumMolsPerColocCluster(:)) ./ AreaDofC ./ cell2mat(background_density),...
-        cell2mat(MeanNumMolsPerNonColocCluster(:)) ./ Area2 ./ cell2mat(background_density),...
+        MeanNumMolsPerColocCluster(:), ...
+        NumColocClustersPerROI(:), ...
+        MeanNumMolsPerNonColocCluster(:), ...
+        NumNonColocClustersPerROI(:),...
+        MeanNumMolsPerColocCluster(:) ./ AreaDofC ./ cell2mat(background_density),...
+        MeanNumMolsPerNonColocCluster(:) ./ Area2 ./ cell2mat(background_density),...
         ];
-    
+    % replace NaN as O
+    Matrix_Result(find(isnan(Matrix_Result)==1)) = 0;
+
     RegionName = strcat('Clus-DoC results');
     
     switch Ch
