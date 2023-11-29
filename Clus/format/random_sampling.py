@@ -31,6 +31,22 @@ for i in np.arange(0.1, 1.0, 0.1):
 	               'Chi square', 'PSF width [nm]', 'Channel', 'Z Slice']
 	raw.astype(int)
 
+	background = df[[0, 1]]
+	background.columns = ['Position X [nm]', 'Position Y [nm]']
+	background.astype(int)
+	for j in range(4):
+		background.insert(j, j, 0)
+	for j in range(6, 11):
+		background.insert(j, j, 0)
+	background.insert(11, 'Channel', 2)
+	background.insert(12, 'Z Slice', 1)
+	background.columns = ['Index', 'First Frame', 'Number Frames', 'Frames Missing', 'Position X [nm]',
+	                      'Position Y [nm]', 'Precision [nm]', 'Number Photons', 'Background variance',
+	                      'Chi square', 'PSF width [nm]', 'Channel', 'Z Slice']
+	background.astype(int)
+
+	raw = pd.concat([raw, background], ignore_index=True)
+
 	file_path = "C:/Users/scaactk/Desktop/data/20230828-1QW_2_crop2_%.1f.txt" % (1 - i)
 	print(file_path)
 	raw.to_csv(file_path, index=None, sep='\t')
@@ -46,3 +62,51 @@ for i in np.arange(0.1, 1.0, 0.1):
 		           )
 
 		print("OK")
+
+raw = df[[0, 1]]
+raw.columns = ['Position X [nm]', 'Position Y [nm]']
+raw.astype(int)
+for j in range(4):
+	raw.insert(j, j, 0)
+
+for j in range(6, 11):
+	raw.insert(j, j, 0)
+
+raw.insert(11, 'Channel', 1)
+raw.insert(12, 'Z Slice', 1)
+raw.columns = ['Index', 'First Frame', 'Number Frames', 'Frames Missing', 'Position X [nm]',
+               'Position Y [nm]', 'Precision [nm]', 'Number Photons', 'Background variance',
+               'Chi square', 'PSF width [nm]', 'Channel', 'Z Slice']
+raw.astype(int)
+
+background = df[[0, 1]]
+background.columns = ['Position X [nm]', 'Position Y [nm]']
+background.astype(int)
+for j in range(4):
+	background.insert(j, j, 0)
+for j in range(6, 11):
+	background.insert(j, j, 0)
+background.insert(11, 'Channel', 2)
+background.insert(12, 'Z Slice', 1)
+background.columns = ['Index', 'First Frame', 'Number Frames', 'Frames Missing', 'Position X [nm]',
+                      'Position Y [nm]', 'Precision [nm]', 'Number Photons', 'Background variance',
+                      'Chi square', 'PSF width [nm]', 'Channel', 'Z Slice']
+background.astype(int)
+
+raw = pd.concat([raw, background], ignore_index=True)
+
+file_path = "C:/Users/scaactk/Desktop/data/20230828-1QW_2_crop2.txt"
+print(file_path)
+raw.to_csv(file_path, index=None, sep='\t')
+
+with open(file_path, 'a', encoding='utf-8') as file:
+	file.write("\n"
+	           "VoxelSizeX : 0.106\n\n"
+	           "VoxelSizeY : 0.106\n\n"
+	           "ResolutionY : 0.1000000000\n\n"
+	           "SizeX : 5120\n\n"
+	           "SizeY : 5120\n\n"
+	           "ROI List : \n"
+	           )
+
+	print("OK")
